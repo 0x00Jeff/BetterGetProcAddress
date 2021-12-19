@@ -3,4 +3,6 @@ POC of a better/faster implementation of GetProcAddress using binary search, see
 
 note that I'm using mingw-gcc, if that's not the case for you, you might need to provide some struct declarations such as the PEB, instead of including winternl.h
 
-also shoutout to hyper and base64
+also note that this is just a POC that only parses ntdll exports, shouldn't be hard to generalize it tho
+
+lastly shoutout to hyper and base64
