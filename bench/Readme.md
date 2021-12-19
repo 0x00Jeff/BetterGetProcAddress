@@ -1,3 +1,5 @@
+![you even bench bro ?](bench.gif)
+
 the benchmarker runs the function with 3 methods, against 6 random ntdll exports, 100 times each, and then calculate the average time for each method
 
 	first method : using the GetProcAddress Api
