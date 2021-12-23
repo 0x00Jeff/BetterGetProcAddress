@@ -1,3 +1,5 @@
+![you even bench bro ?](bench.gif)
+
 the benchmarker runs tries to resolve the exports using 3 methods, against 28 ntdll exports, everyone starting with a different character, 100 times each, and then calculates the average each method took
 
 	first method : using the GetProcAddress Api
