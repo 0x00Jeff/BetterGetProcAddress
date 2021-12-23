@@ -32,25 +32,20 @@ PVOID get_export(PVOID base, char *func, int method){
 
 
 // binary search
-
     if(method == MAGIC){
-        unsigned long right, left, middle, old_middle;
+        unsigned long right, left, middle;//, old_middle = 0;
         right = exports -> NumberOfNames;
         left = 0;
 
-
-        while(right != left){
-            old_middle = middle;
+	while(right != left){
             middle = left + ((right - left) >> 1);
-            if(middle == old_middle) break; // function doesn't exist
-
             int result = strcmp((char *)base + name_rva[middle], func);
             if(!result)
                 return (PVOID)((char *)base + function_rva[ordinal[middle]]);
             else if(result < 0)
-                left = middle - 1;
+		left = middle;
             else
-                right = middle + 1;
+		right = middle;
         }
     }
 
@@ -64,6 +59,5 @@ PVOID get_export(PVOID base, char *func, int method){
             }
         }
     }
-
 	return NULL;
 }

@@ -15,7 +15,7 @@ int main(void){
 		exit(1);
 	}
 	else
-		printf("len = %d", my_strlen("thoughts peter ?"));
+		printf("the answer is %d", (my_strlen("thoughts peter ?") << 1) + 10);
 
 	return 0;
 }
