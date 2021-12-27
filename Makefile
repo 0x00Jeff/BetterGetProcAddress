@@ -1,16 +1,16 @@
-FILE=	BetterGetProcAddress.exe
-SRC	=	$(FILE:exe=.c) exports.c
-OBJ	=	BetterGetProcAddress.o exports.o
+FILE	=	BetterGetProcAddress.exe
+SRC	=	$(FILE:.exe=.c) exports.c
+OBJ	=	$(SRC:.c=.o)
 
 CC	=	x86_64-w64-mingw32-gcc
-CFLAGS	= -Wall -Wextra -march=native -mtune=native -O3
+CFLAGS	=	-Wall -Wextra -march=native -mtune=native -O3
 
 $(FILE): $(OBJ)
 	$(CC) $^ -o $@
 
-../exports.o:	../exports.c ../exports.h
+exports.o: exports.c exports.h
 
-BetterGetProcAddress.o:	BetterGetProcAddress.c
+$(OBJ):
 
 .PHONY: clean
 clean:
