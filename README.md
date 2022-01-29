@@ -5,4 +5,4 @@ note that I'm using mingw-gcc, if that's not the case for you, you might need to
 
 also shoutout to hyper and base64
 
-writeup explaining how this works : coming soon
+[writeup explaining how this works](https://phasetw0.com/windows-internals/optimizing_function_resolving/)
